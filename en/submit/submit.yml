@@ -1,0 +1,7 @@
+name: acquisition
+files:
+    required:
+        - moviescraper.py
+        - visualizer.py
+        - imdb-crawler.py
+        - top250movies.csv
