@@ -7,7 +7,6 @@ This script crawls the IMDB top 250 movies.
 
 import os
 import csv
-import errno
 
 from requests import get
 from requests.exceptions import RequestException

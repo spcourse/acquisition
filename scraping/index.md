@@ -124,9 +124,7 @@ Now that we have the data in a `.csv`-format, it is time to try to get some insi
 
 [visualizer.py]: visualizer.py
 
-For now, the main function only prints the variable `data_dict` and it's type, to give you some insight into what the variable is.
-
-Your aim in this part of the exercise is to visualize the data scraped from IMDB in a line chart. In order for the data to be plotted in a line chart, the data has to be transformed. Find the average rating a movie in the top 50 of IMDB has gotten for the years 2008-now. Potentially interesting things to look at for this part of the exercise are the [Pandas read csv method] and [Seaborn]. If you feel that there is perhaps a better way to answer our question using your data, feel free to **also** create any other plots.
+For now, `visualizer.py` is mostly empty. Your aim in this part of the exercise is to visualize the data scraped from IMDB in a appropriate chart. Find the average rating a movie in the top 50 of IMDB has gotten for the years 2008-now. Our aim is to answer the question: "Were there any years in which movies (from the top 50) scored higher than in other years?". Potentially interesting things to look at for this part of the exercise are the [Pandas read csv method] and [Seaborn]. If you feel that there is perhaps a better way to answer our research question using your data, feel free to **also** create any other plots.
 
 [Pandas read csv method]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
 [Seaborn]: https://seaborn.pydata.org/api.html
