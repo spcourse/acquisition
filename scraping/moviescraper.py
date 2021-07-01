@@ -64,7 +64,7 @@ def simple_get(url):
 
 def is_good_response(resp):
     """
-    Returns true if the response seems to be HTML, false otherwise
+    Returns True if the response seems to be HTML, false otherwise
     """
     content_type = resp.headers['Content-Type'].lower()
     return (resp.status_code == 200

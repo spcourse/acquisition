@@ -3,5 +3,7 @@ files:
     required:
         - moviescraper.py
         - visualizer.py
+        - movies.html
+        - movies.csv
         - imdb-crawler.py
         - top250movies.csv

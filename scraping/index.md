@@ -18,7 +18,7 @@ In this assignment you will learn to use the Document Object Model (DOM) using P
 
 ## Before starting
 
-1. We assume Python 3, Requests, Pandas, Seaborn, and BeautifulSoup4 are installed (see [preparations] if this is not the case).
+1. For this assignment you'll need to have the following Python 3 libraries installed: Requests, Pandas, Seaborn, and BeautifulSoup4.
 
 2. We will be looking at IMDB movies and getting data off this website. To get started, you should look at [the BeautifulSoup documentation].
 
@@ -31,7 +31,6 @@ In this assignment you will learn to use the Document Object Model (DOM) using P
 6. It could be that there are missing data (for instance the runtime). Insert an appropriate value when something is missing. Note that the director is not an actor or actress.
 
 [output.csv]: output.csv
-[preparations]: /preparation
 [the BeautifulSoup documentation]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 ## DOM scraping and traversal
@@ -46,6 +45,8 @@ This is the introductory exercise to BeautifulSoup. We will try to guide you alo
 
 ![embed](https://www.youtube.com/embed/GBKwdFEyJks)
 
+![embed](https://www.youtube.com/embed/ng2o98k983k)
+
 ### Building `moviescraper.py`
 
 To get you started we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
@@ -59,7 +60,7 @@ First, implement the `extract_movies(dom)` function. It should extract a list of
   - Actors/actresses (comma separated if more than one)
   - Runtime (only a number!)
 
-You might need to filter out some characters from a string. One method to do this is through the use of [Regular Expressions]. After importing `re`, `re.findall` can be used to find all occurances in a string, while `re.search` can be used to find the first occurence. Keep in mind that the resulting type after these Regular Expressions is still a string!
+You might need to filter out some characters from a string. _Especially retrieving multiple actors will become very difficult with BeautifulSoup only._ One method to do this is through the use of [Regular Expressions]. After importing `re`, `re.findall` can be used to find all occurances in a string, while `re.search` can be used to find the first occurence. Keep in mind that the resulting type after these Regular Expressions is still a string!
 
     >>> import re
     >>> re.findall(r'\d+', '123 dogs jumped the fence and ate over 4400 sheep!')
@@ -115,6 +116,8 @@ This will open the browser's inspector functionality which shows you the source 
 
 Also have a look at the `find()` function in the documentation of BeautifulSoup4 and look for the CSS selectors, they will make this exercise much easier!
 
+> Keep in mind that the use of BeautifulSoup and RegEx will not necessarily result in _beautiful_ code. In fact, data collection through scraping is known to be a very messy practice. You might need to heavily comment code to make sure that it is understandable. **Especially** retrieving actors and directors will be very messy.
+
 ## Visualizing the data
 
 Now that we have the data in a `.csv`-format, it is time to try to get some insights into what we scraped. For this you will be using [visualizer.py].
@@ -138,46 +141,9 @@ Don't forget to keep an eye on code design. Use functions, choose useful names f
 
 ## Finished?
 
-If you have finished far before the deadline and are itching to gather more data, you can have a look at the [Pandas] library to see what kind of things you can do with the data gathered using the scraper, that are beyond the scope of this exercise.
-
 If you have finished the scraper and visualization, you can continue to the next exercise: [Crawler]
+
+If you have finished far before the deadline and are itching to gather more data, you can have a look at the [Pandas] library to see what kind of things you can do with the data gathered using the scraper, that are beyond the scope of this exercise.
 
 [Crawler]: /acquisition/crawling
 [Pandas]: https://pandas.pydata.org/
-
-## Submitting
-
-1. `moviescraper.py`
-2. `visualizer.py`
-3. `movies.html`
-4. `movies.csv`
-
-
-
-
-<!-- In this course you will use GitHub to submit your code and all other documents. You will also use GitHub Pages to publish your visualizations.
-
-
-### Git
-
-Please attend the lecture on Introduction to GitHub which will guide your through the setup and basic git commands. When you are all set-up follow the instructions below.
-
-
-### Github
-
-Structure your assignments folder as follows: make two subfolders *Homework* and *Design*. In each folder you will weekly make a new folder with a week number and put your documents from that week in there. Specific instructions on what should be committed each week are to be found in the assignments description. For more information on the lay-out of your repository, see the documentation in the menu on the left under 'Resources'.
-
-__Submit the URL of your repository__ below. Make sure your submit a link to the root of your repository, i.e. https://github.com/*username*/dataprocessing
-
-Please may refer to this [Github manual] if you forgot your commands.
-
-[Github manual]: Github_manual.pdf
-
-
-
-Add a folder Week_1 to your DataProcessing/Homework repository containing the following files:
-
-1. `moviescraper.py`
-2. `visualizer.py`
-3. `movies.html`
-4. `movies.csv` -->
