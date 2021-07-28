@@ -56,9 +56,10 @@ def simple_get(url):
             if is_good_response(resp):
                 return resp.content
             else:
+                print(f'Did not get a correct response from {url}. Are you sure the provided URL is correct?')
                 return None
     except RequestException as e:
-        print('The following error occurred during HTTP GET request to {0} : {1}'.format(url, str(e)))
+        print(f'The following error occurred during HTTP GET request to {url} : {str(e)}')
         return None
 
 
