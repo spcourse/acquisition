@@ -6,4 +6,4 @@ Web scraping is a way of extracting data from websites. While this process could
 
 In this module, we'll focus on scraping data from the Internet Movie Database (IMDb). This website is an online database of information related to films, programs, home videos, games, and streaming content. It includes information like cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critic reviews.
 
-In the second part of the module, we will focus on a second technique: web crawling. Web crawling is a technique where a program visits multiple webpages and scrapes the page for information. An example fo where this technique is used, is by search engines to update their web content. In our case, we will use it to scrape information from different pages.y.
+In the second part of the module, we will focus on a second technique: web crawling. Web crawling is a technique where a program visits multiple webpages and scrapes the page for information. An example of where this technique is used, is by search engines to update their web content. In our case, we will use it to scrape information from different pages.

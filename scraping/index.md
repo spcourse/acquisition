@@ -22,11 +22,11 @@ In this assignment you will learn to use the Document Object Model (DOM) using P
 
 2. We will be looking at IMDB movies and getting data off this website. To get started, you should look at [the BeautifulSoup documentation].
 
-3. To get you started we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
+3. To get you started, we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
 
-4. To help you validate your script we provide an example output CSV file [output.csv]. You should run the `moviescraper.py` script with the command `python moviescraper.py`. This will copy the IMDB webpage to the current directory and save a CSV file. The example output file only contains the first two movies.
+4. To help you validate your script, we provide an example output CSV file [output.csv]. You should run the `moviescraper.py` script with the command `python moviescraper.py`. This will copy the IMDB webpage to the current directory and save a CSV file. The example output file only contains the first two movies.
 
-5. When you hand this exercise in be sure to submit: your `moviescraper.py`, `visualizer.py`, `movies.html`, and `movies.csv`. This will allow us to verify that your output CSV file is correct and that the script actually works given the HTML from IMDB.
+5. When you hand in this exercise, be sure to submit your `moviescraper.py`, `visualizer.py`, `movies.html`, and `movies.csv`. This will allow us to verify that your output CSV file is correct and that the script actually works given the HTML from IMDB.
 
 6. It could be that there are missing data (for instance the runtime). Insert an appropriate value when something is missing. Note that the director is not an actor or actress.
 
@@ -35,7 +35,7 @@ In this assignment you will learn to use the Document Object Model (DOM) using P
 
 ## DOM scraping and traversal
 
-A webpage is a document. This document can be either displayed in the browser window or as the HTML source. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the webpage and can be used as a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content.
+A webpage is a document. This document can be either displayed in the browser window or as the HTML source. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the webpage and can be used as a programming interface for HTML and XML documents. It represents the page so that programs can change the document's structure, style, and content.
 
 To scrape data from webpages, we will be using BeautifulSoup, a Python web mining module. Its description is as follows: _Beautiful Soup is a Python library for pulling data out of HTML and XML files. It works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree. It commonly saves programmers hours or days of work._
 
@@ -49,11 +49,13 @@ This is the introductory exercise to BeautifulSoup. We will try to guide you alo
 
 ### Building `moviescraper.py`
 
-To get you started we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
+To get you started, we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
+
+<!--> De alinea hierboven staat ook al op regel 25 <!-->
 
 Open up and read the `moviescraper.py`-file. Note that this is just some scaffolding, so you actually don't have to use this at all. As long as your code runs at the end of the day and produces the right results in a CSV file, we're happy.
 
-First, implement the `extract_movies(dom)` function. It should extract a list of the highest rated movies from the passed DOM (which is of the IMDB page). Each movie entry should be a dictionary that contains the following fields:
+First, implement the `extract_movies(dom)` function. It should extract a list of the highest rated movies from the passed DOM (which is the IMDB page). Each movie entry should be a dictionary that contains the following fields:
   - Title
   - Rating
   - Year of release (only a number!)
@@ -124,7 +126,7 @@ Now that we have the data in a `.csv`-format, it is time to try to get some insi
 
 [visualizer.py]: visualizer.py
 
-For now, `visualizer.py` is mostly empty. Your aim in this part of the exercise is to visualize the data scraped from IMDB in a appropriate chart. Find the average rating a movie in the top 50 of IMDB has gotten for the years 2008-now. Our aim is to answer the question: "Were there any years in which movies (from the top 50) scored higher than in other years?". Potentially interesting things to look at for this part of the exercise are the [Pandas read csv method] and [Seaborn]. If you feel that there is perhaps a better way to answer our research question using your data, feel free to **also** create any other plots.
+For now, `visualizer.py` is mostly empty. Your aim in this part of the exercise is to visualize the data scraped from IMDB in an appropriate chart. Find the average rating a movie in the top 50 of IMDB has gotten for the years 2008-now. Our aim is to answer the question: "Were there any years in which movies (from the top 50) scored higher than in other years?". Potentially interesting things to look at for this part of the exercise are the [Pandas read csv method] and [Seaborn]. If you feel that there is perhaps a better way to answer our research question using your data, feel free to **also** create any other plots.
 
 [Pandas read csv method]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
 [Seaborn]: https://seaborn.pydata.org/api.html
