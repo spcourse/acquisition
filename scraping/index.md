@@ -22,7 +22,7 @@ In this assignment you will learn to use the Document Object Model (DOM) using P
 
 2. We will be looking at IMDB movies and getting data off this website. To get started, you should look at [the BeautifulSoup documentation].
 
-3. To get you started, we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
+3. To get you started, we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. 
 
 4. To help you validate your script, we provide an example output CSV file [output.csv]. You should run the `moviescraper.py` script with the command `python moviescraper.py`. This will copy the IMDB webpage to the current directory and save a CSV file. The example output file only contains the first two movies.
 
