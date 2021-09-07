@@ -49,9 +49,7 @@ This is the introductory exercise to BeautifulSoup. We will try to guide you alo
 
 ### Building `moviescraper.py`
 
-To get you started, we have provided you with a script ([moviescraper.py]) that loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`) that will contain only a header until you complete the implementation of the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as the first line of the file. This way the file is parsed correctly in columns.
-
-<!--> De alinea hierboven staat ook al op regel 25 <!-->
+([moviescraper.py]) already loads the correct IMDB address, makes a local backup of it (`movies.html`) and outputs a CSV file (`movies.csv`). You will need to implement the functions `extract_movies(dom)` and `save_csv(outfile, movies)`. Note that if you want to check your `movies.csv` file in Excel on a Mac, add 'sep=,' as a string tos the first line of the file. This way the file is parsed correctly in columns.
 
 Open up and read the `moviescraper.py`-file. Note that this is just some scaffolding, so you actually don't have to use this at all. As long as your code runs at the end of the day and produces the right results in a CSV file, we're happy.
 
