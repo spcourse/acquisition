@@ -2,7 +2,7 @@
 
 ## Web crawling & HTML scraping
 
-This exercise, we will practice scraping from multiple websites using web-crawling. You will learn how you can acquire data from multiple pages by following links. You’ll be scraping data from IMDB, the Internet Movie DataBase!
+In this exercise we will practice scraping from multiple websites using web-crawling. You will learn how you can acquire data from multiple pages by following links. You’ll be scraping data from IMDB, the Internet Movie DataBase!
 
 For this exercise, we have provided you with some code that makes HTML backups of a few selected webpages. You will write code that scrapes IMDB's top 250 movies index page and the individual movie pages yourself.
 
@@ -25,7 +25,7 @@ Your output should look like [`sample_HTML.csv`](sample_HTML.csv).
 
 ### Hints
 
-* Have a look at the `find()` function in the documentation of BeautifulSoup4 and look for  the CSS selectors, they will make this exercise much easier!
+* Have a look at the `find()` function in the documentation of BeautifulSoup4 and look for the CSS selectors, they will make this exercise much easier!
 * The script will likely be slow, but that is no problem.
 
 ## Alternative exercise
