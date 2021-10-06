@@ -1,9 +1,13 @@
-name: acquisition
+name: scraping-data
 files:
     required:
-        - moviescraper.py
-        - visualizer.py
-        - movies.html
-        - movies.csv
-        - imdb-crawler.py
-        - top250movies.csv
+        - pandas.ipynb
+        - scraper.py
+        - extract.py
+        - visualize_years.py
+        - visualize_actors.py
+        - crawler.py
+        - visualize_languages.py
+        - years.png
+        - actors.png
+        - languages.png
