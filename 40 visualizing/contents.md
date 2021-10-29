@@ -27,9 +27,10 @@ Reflect on the figure your script creates. How do you choose the range of the y-
 
 Don't forget to keep an eye on code design. Use functions, choose useful names for your variables, prevent code repetition, place comments, etc.
 
-Looking at your plot, which year was the best year for movies?
+### Question 1
+(write you answers in a document called `answers.txt`)
 
-<textarea name="form[1]" rows="1" required=""></textarea>
+Looking at your plot, which year was the best year for movies?
 
 ## Part 2
 
@@ -57,10 +58,11 @@ The program has the following requirements:
 - The horizontal axis of the plots should have the actors (only the 50 actors with the most appearances), the vertical axis should have the number of appearances of that actor.
 - The bar plot should be sorted (highest first).
 
-Looking at your plot, which actor was the most influential?
+### Question 2
+(write you answers in a document called `answers.txt`)
 
-<textarea name="form[2]" rows="1" required=""></textarea>
+Looking at your plot, which actor was the most influential?
 
 ## Done
 
-In the next assignment we're going to look at the representation of languages in the top movies. This is very similar to what we've done so far, but will require an additional step (web crawling). 
+In the next assignment we're going to look at the representation of languages in the top movies. This is very similar to what we've done so far, but will require an additional step (web crawling).

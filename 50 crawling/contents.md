@@ -68,12 +68,15 @@ The program has the following requirements:
 - It should show the number of occurrences of each language *per decade*. (Each occurrence counts equally, whether it's the first language or the last language for a movie).
 - The horizontal axis of the plot should have the decades (1930s to 2010s), the vertical axis should have the number of occurrences.
 
+### Question 3
+(write you answers in a document called `answers.txt`)
+
 Looking at your plot, which was the second most influential language in the 1970s?
 
-<textarea name="form[1]" rows="1" required=""></textarea>
+
+### Question 4
+(write you answers in a document called `answers.txt`)
 
 And which language was the second most influential in the 2010s?
-
-<textarea name="form[2]" rows="1" required=""></textarea>
 
 ## Done
