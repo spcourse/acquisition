@@ -98,7 +98,7 @@ When we run your program:
 
     $ python scraper.py data/top50.csv
 
-It should produce a file called `top50/csv` in the directory `data` containing the following data:
+It should produce a file called `top50.csv` in the directory `data` containing the following data:
 
     title,rating,year,actors,runtime,url
     Hababam Sinifi,9.3,1975,Kemal Sunal;Münir Özkul;Halit Akçatepe;Tarik Akan,87,https://www.imdb.com//title/tt0252487/
@@ -171,8 +171,6 @@ You might need to filter out some characters from a string. _Especially retrievi
     '4400'
 
 [Regular Expressions]: https://www.w3schools.com/python/python_regex.asp
-
-Then, implement the `save_csv(outfile, movies)` function. It should write the list of the highest rated movies (`movies`) to `outfile`.
 
 
 #### Use comments
