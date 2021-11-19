@@ -46,6 +46,7 @@ Requirements:
 
 * Have a look at the `find()` function in the documentation of BeautifulSoup4 and look for the CSS selectors, they will make this exercise much easier!
 * The script will be very slow. Each page load will take a couple of seconds. And there will be hundreds of page loads. This is not a problem. But, for your own convenience, **create a small test input file with only two or three movies**, to see if it's working correctly before your run the script for the entire dataset.
+* There is at least one movie that has no language listed at all ([this one](https://www.imdb.com/title/tt2185022/?ref_=adv_li_tt)). Think of a way that your program doesn't crash when your Beautifulsoup `find()` doesn't find any languages. You could test this movie in your small test input file!
 
 ## Part 2: Visualizing
 
@@ -53,7 +54,7 @@ Now back to the question:
 
 How did language influence in the top rated movies change over the last 9 decades?
 
-Write a program called `visualize_languages.py` that generates a line plot of the top 10 languages (that occur the most in our dataset) over time.
+Write a program called `visualize_languages.py` that generates a line plot of **the top 10 languages** (that occur the most in our dataset) over time.
 
 Usage:
 
