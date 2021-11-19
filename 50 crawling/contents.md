@@ -46,7 +46,7 @@ Requirements:
 
 * Have a look at the `find()` function in the documentation of BeautifulSoup4 and look for the CSS selectors, they will make this exercise much easier!
 * The script will be very slow. Each page load will take a couple of seconds. And there will be hundreds of page loads. This is not a problem. But, for your own convenience, **create a small test input file with only two or three movies**, to see if it's working correctly before your run the script for the entire dataset.
-* There is at least one movie that has no language listed at all ([this one](https://www.imdb.com/title/tt2185022/?ref_=adv_li_tt)). Think of a way that your program doesn't crash when your Beautifulsoup `find()` doesn't find any languages. You could test this movie in your small test input file!
+* There is at least one movie that has no language listed at all ([this one](https://www.imdb.com/title/tt2185022/?ref_=adv_li_tt)). Think of a way that makes sure your program doesn't crash when your Beautifulsoup `find()` doesn't find any languages. You could test this movie explicitly in your small test input file!
 
 ## Part 2: Visualizing
 
@@ -68,6 +68,9 @@ The program has the following requirements:
 - The plot should have a legend making clear which line corresponds to which language.
 - It should show the number of occurrences of each language *per decade*. (Each occurrence counts equally, whether it's the first language or the last language for a movie).
 - The horizontal axis of the plot should have the decades (1930s to 2010s), the vertical axis should have the number of occurrences.
+
+### Hints
+- Keep in mind that there is at least one movie for which there is no language available, and that a couple of movies also have one of their languages listed as `'None'`.
 
 ### Question 3
 (write your answers in a document called `answers.txt`)
