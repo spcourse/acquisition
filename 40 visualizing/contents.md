@@ -28,7 +28,7 @@ Reflect on the figure your script creates. How do you choose the range of the y-
 Don't forget to keep an eye on code design. Use functions, choose useful names for your variables, prevent code repetition, place comments, etc.
 
 ### Question 1
-(write you answers in a document called `answers.txt`)
+(write your answers in a document called `answers.txt`)
 
 Looking at your plot, which year was the best year for movies?
 
