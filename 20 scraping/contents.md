@@ -192,13 +192,15 @@ The value for `start` increases by 50 every time. So first it's `start=1`, then 
 
 ### Goal
 
-Adapt your code to collect the top N rated movies.
+Adapt your code to collect at least `m` top rated movies for every year between `s` and `e`:
 
 - Write a loop that calls `extract_movies()` for each successive URL and collects the DataFrame's. (If you wrote it well, you should not have to adapt the function `extract_movies()` itself.)
+- The loop should continue until we know that we have **at least `m` movies for every year** between 1930 and 2020.
 - In the end all the DataFrames should be concatenated into one big DataFrame, that is then saved as a `.csv`.
-- The loop should continue until we know that we have **at least 5 movies for every year** between 1930 and 2020.
-- Note that the code should be adaptive. If we decide to provide another period (than between 1930 and 2020) with the optional parameters `-s` and `-e`, it should generate a top N for only that period.
 - The resulting `.csv` should be sorted by year (ascending).
+- Your program should have an optional parameter `-m` that can change the number of movies you at least want to have for every year.
+- Note that the code should be adaptive. If we decide to provide another period (than between 1930 and 2020) with the optional parameters `-s` and `-e`, it should generate a top N for only that period.
+
 
 ### Example
 
