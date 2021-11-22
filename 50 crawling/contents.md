@@ -10,7 +10,7 @@ The problem, our current dataset doesn't have any language information. We'll ha
 
 ## Part 1: Web crawling
 
-The file you `top5.csv` you generate before doesn't contain any language information. The main problem is that this information is not present on the IMDB page that we used. So we'll have to get it some other way. We did store the URL's for the webpage of each movie in the `. csv` file. This links to a page with much more detailed information about each movie. This includes language information.
+The file `top5.csv` you have generated before doesn't contain any language information. The main problem is that this information is not present on the IMDB page that we used. So we'll have to get it some other way. We did store the URL's for the webpage of each movie in the `. csv` file. This links to a page with much more detailed information about each movie. This includes language information.
 
 Your goal is to write a program called `crawler.py` that looks up this language information and creates an augmented dataset with this information.
 
