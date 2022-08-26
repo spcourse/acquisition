@@ -47,14 +47,6 @@ For this exercise you will set up a data pipeline with the following steps:
 
 3. When scraping a website there can be inconsistencies in the HTML. It could for instance be that there are missing data (for instance the realease year for a film or the runtime). Make sure to check this and insert an appropriate value when something is missing.
 
-## DOM scraping and traversal
-
-A webpage is a document. This document can be either displayed in the browser window or as the HTML source. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the webpage and can be used as a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content.
-
-![embed](https://www.youtube.com/embed/YK78KhMf7bs?t=68)
-
-![embed](https://www.youtube.com/embed/GBKwdFEyJks)
-
 ## BeautifulSoup
 
 To scrape data from webpages, we will be using BeautifulSoup, a Python web mining module. Its description is as follows: _Beautiful Soup is a Python library for pulling data out of HTML and XML files. It works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree. It commonly saves programmers hours or days of work._

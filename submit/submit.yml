@@ -1,6 +1,7 @@
 name: scraping-data
 files:
     required:
+        - homepage.zip
         - pandas.ipynb
         - scraper.py
         - extract.py
