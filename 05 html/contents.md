@@ -1,6 +1,6 @@
 # HTML and CSS
 
-The video below is a lecture from Harvard's CS50 on HTML:
+The video below is a lecture from Harvard's CS50 on HTML. You don't need to learn the last part on SASS (around 1:48). You can watch it if you find it interesting, but it's not needed for the assignment. 
 
 ![embed](https://www.youtube.com/embed/zFZrkCIc2Oc)
 

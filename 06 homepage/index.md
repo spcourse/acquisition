@@ -1,11 +1,10 @@
 # Homepage
 
-> For this assignment you can earn a bonus point for an exceptional submission. Below you will find a strict list of requirements for your webiste. These requirements contain all the topics and features that you need to explore. However, you are encouraged to go beyond these requirements. Create a homepage that you want to use!
+Build your own homepage in HTML!
 
 ## Objectives
 
 - Become comfortable with HTML and CSS to design and style webpages.
-- Learn to use SCSS to write more complex stylesheets for your webpages.
 
 ## What you need to find out
 
@@ -15,15 +14,6 @@ How to:
 - use CSS and SCSS to style a page
 - use git to manage to project's files
 - use GitHub to host your website
-- work with **sass** in the terminal
-
-## Preparations
-
-Before your do anything else, watch and understand the HTML video lecture:
-
-- Lecture 1, [HTML and CSS](/materials/acquisition/html)
-
-If you have any questions about the lectures, please post a question!
 
 ## Getting Started
 
@@ -45,18 +35,8 @@ subject to the following requirements:
 - Your stylesheet(s) must use at least five different CSS properties, and at
   least five different types of CSS selectors. You must use the `#id` selector
   at least once, and the `.class` selector at least once.
-- You must use Bootstrap 5.1 on your website, taking advantage of at least one
-  Bootstrap [component](https://getbootstrap.com/docs/5.1/components/),
-  and using at least two Bootstrap columns for layout purposes using
-  Bootstrap's [grid model](https://getbootstrap.com/docs/5.1/layout/grid/).
-- Your stylesheets must use at least one SCSS variable, at least one example of
-  SCSS nesting, and at least one use of SCSS inheritance.
 - Images may not be larger than 1MB.
 
 ## Tips
 
 - You can view your webpages offline by opening the `.html` files with your web browser.
-
-## How to Submit
-
-Zip your stuff into the file `homepage.zip` (make sure that images are not >1MB!).
