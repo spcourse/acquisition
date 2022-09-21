@@ -12,8 +12,6 @@ How to:
 
 - write HTML tags to structure a page
 - use CSS and SCSS to style a page
-- use git to manage to project's files
-- use GitHub to host your website
 
 ## Getting Started
 
