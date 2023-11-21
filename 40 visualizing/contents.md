@@ -59,7 +59,7 @@ The program has the following requirements:
 - The bar plot should be sorted (highest first).
 
 ### Question 2
-(write you answers in a document called `answers.txt`)
+(write your answers in a document called `answers.txt`)
 
 Looking at your plot, which actor was the most influential?
 

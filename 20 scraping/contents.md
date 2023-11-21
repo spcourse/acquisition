@@ -67,7 +67,7 @@ We can run the file using the command:
 
 This does a number of things:
 
-- It reads the following URL: [https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-01-01&num_votes=5000,&sort=user_rating,desc&start=1&view=advanced]
+- It reads the following URL: <https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-01-01&num_votes=5000,&sort=user_rating,desc&start=1&view=advanced>
 - The function `extract_movies()` reads the header from the webpage and prints it. This print statement is just an example to get you started, but should be removed. The function shouldn't print anything when it's finished.
 - The function `extract_movies()` currently returns a pandas DataFrame with nonsense values. This is also just an example to get you started. This dataframe should be filled with the values you scrape from the website.
 - The DataFrame is written to the csv file: data/movies.csv
