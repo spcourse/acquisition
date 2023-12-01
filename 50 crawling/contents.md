@@ -12,9 +12,9 @@ Your goal is to write a program called `crawler.py` that looks up this informati
 
 Usage:
 
-$ python crawler.py data/top5.csv data/top5-actors-languages.csv
+    $ python crawler.py data/top5.csv data/top5-actors-languages.csv
 
-This will take the data from `top5.csv`, use the URL's to read the page for each movie and retrieve the languages spoken in that movie. It will write the results to `top5-with-languages.csv`. So this will look something like this:
+This will take the data from `top5.csv`, use the URL's to read the page for each movie and retrieve the languages spoken in that movie. It will write the results to `top5-actors-languages.csv`. So this will look something like this:
 
     title,rating,year,actors,languages,runtime,url
     emlya,7.3,1930,Stepan Shkurat;Semyon Svashenko;Yuliya Solntseva;Yelena Maksimova,None;Russian,75,https://www.imdb.com//title/tt0021571/
@@ -38,7 +38,7 @@ To aid you in this process (and speed it up significantly) we have provided you 
 
 ### Requirements
 
-- The program accepts two positional command line arguments: the input file and the output file. You should use argparse for this.
+- The program accepts two positional command line arguments: the input file and the output file. You should use `argparse` for this.
 - The program reads the data from the input file into a pandas DataFrame.
 - The program uses `get_page_contents_multiprocess()` from `helpers.py` to retrieve the content for a list of URLs and stores the htmls in the folder "/webpages".
 - The program then uses `read_page_content_from_disk()` to get the html from disk one by one, finds the actors listed under "stars" (often only 3 or 4 actors), and the languages spoken in that movie. Store these values in the DataFrame.
@@ -74,8 +74,8 @@ The program has the following requirements:
 
 - It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `actors.png` in the directory `plots`, based on the data of `top5` in the directory `data`.
 - It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a bar plot.
-- The horizontal axis of the plots should have the actors (only the 50 actors with the most appearances), the vertical axis should have the number of appearances of that actor.
+- It should output a `.png` file containing a bar plot. This can be done using matplotlibs [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html) method.
+- The horizontal axis of the plots should have the actors (only the 50 actors with the most appearances), the vertical axis should have the number of appearances of that actor. Printing 50 names vertically might make your plot illegible, try to change this so that its clear what bar belongs to what actor.
 - The bar plot should be sorted (highest first).
 
 ### Question 2
@@ -98,9 +98,9 @@ Usage:
 
 The program has the following requirements:
 
-- It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `languages.png` in the directory `plots`, based on the data of `top5-with-languages` in the directory `data`.
+- It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `languages.png` in the directory `plots`, based on the data of `top5-actors-languages` in the directory `data`.
 - It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a line plot.
+- It should output a `.png` file containing a line plot with one line per language.
 - The plot should have a legend making clear which line corresponds to which language.
 - It should show the number of occurrences of each language *per decade*. (Each occurrence counts equally, whether it's the first language or the last language for a movie).
 - The horizontal axis of the plot should have the decades (1930s to 2010s), the vertical axis should have the number of occurrences.
