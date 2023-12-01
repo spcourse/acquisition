@@ -31,16 +31,16 @@ Notice the additional columns `actors` and `languages`. Often a movie has more t
 
 To aid you in this process (and speed it up significantly) we have provided you with a couple of functions in `helpers.py` which you might have spotted before:
 
-- `get_page_contents_multiprocess(url_list)`: this function retrieves the page content for a list of URLs and stores them in a folder named "webpages". If an URL was already downloaded, it will skip this one. Retrieving all your movies might still take a couple of minutes (which you'll luckily only have to do once!). Note that `get_page_contents_multiprocess()` will sometimes produce empty files. It will always state why this happened, and sometimes simply re-running the function could solve the problem.
+- `get_multiple_page_contents(url_list)`: this function retrieves the page content for a list of URLs and stores them in a folder named "webpages". If an URL was already downloaded, it will skip this one. Retrieving all your movies might still take a couple of minutes (which you'll luckily only have to do once!). Note that `get_multiple_page_contents()` will sometimes produce empty files. It will always state why this happened, and sometimes simply re-running the function could solve the problem.
 - `read_page_content_from_disk(url)`: this function will retrieve the page content for a single URL from disk.
 
-> `get_page_contents_multiprocess()` retrieves multiple pages at the same time. If it is still too slow or you think your computer can take more, increase the value of `processes`. If your computer struggles a bit, you can decrease the value of `processes`.
+> `get_multiple_page_contents()` retrieves multiple pages at the same time. If it is still too slow or you think your computer can take more, increase the value of `processes`. If your computer struggles a bit, you can decrease the value of `processes`.
 
 ### Requirements
 
 - The program accepts two positional command line arguments: the input file and the output file. You should use argparse for this.
 - The program reads the data from the input file into a pandas DataFrame.
-- The program uses `get_page_contents_multiprocess()` from `helpers.py` to retrieve the content for a list of URLs and stores the htmls in the folder "/webpages".
+- The program uses `get_multiple_page_contents()` from `helpers.py` to retrieve the content for a list of URLs and stores the htmls in the folder "/webpages".
 - The program then uses `read_page_content_from_disk()` to get the html from disk one by one, finds the actors listed under "stars" (often only 3 or 4 actors), and the languages spoken in that movie. Store these values in the DataFrame.
 - The result is written as a `.csv` to the output file.
 - If a movie has more than one actor or language, they should be separated by a semicolon.
