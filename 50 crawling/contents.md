@@ -100,7 +100,7 @@ The program has the following requirements:
 
 - It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `languages.png` in the directory `plots`, based on the data of `top5-actors-languages` in the directory `data`.
 - It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a line plot with one line per language.
+- It should output a `.png` file containing a line plot with one line per language. This can be done using matplotlibs [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html) method.
 - The plot should have a legend making clear which line corresponds to which language.
 - It should show the number of occurrences of each language *per decade*. (Each occurrence counts equally, whether it's the first language or the last language for a movie).
 - The horizontal axis of the plot should have the decades (1930s to 2010s), the vertical axis should have the number of occurrences.

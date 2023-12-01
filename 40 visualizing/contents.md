@@ -19,7 +19,7 @@ The program has the following requirements:
 
 - It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `years.png` in the directory `plots`, based on the data of `top5` in the directory `data`.
 - It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a bar plot.
+- It should output a `.png` file containing a bar plot. This can be done using matplotlibs [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html) method.
 - The horizontal axis of the plots should have the years (from 1930 to 2020), the vertical axis should have the average rating of the top 5 movies for that year.
 
 Reflect on the figure your script creates. How do you choose the range of the y-axis? Are all elements present in the figure?

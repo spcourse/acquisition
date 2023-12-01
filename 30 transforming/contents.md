@@ -16,7 +16,7 @@ This will create a new file, `top5.csv` in the directory `data` that contains a 
 
 The program has the following requirements:
 
-- It accepts two positional command line arguments the input file and the output file. You should use argparse for this.
+- It accepts two positional command line arguments the input file and the output file. You should use `argparse` for this.
 - The program reads the data from the input file into a pandas DataFrame.
 - It will filter the DataFrame such that it only contains the top N (default is 5) movies from every year.
 - It should accept an optional argument `-n` that will allow us to select a lower `N`, so that we could also use the program to generate a top 4 or lower. So we could in principle use the following command to create a top 3: `$ python extract.py -n 3 data/movies.csv data/top3.csv`
