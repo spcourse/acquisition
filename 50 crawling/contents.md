@@ -4,7 +4,7 @@ We have done what we set out to do. But we might ask ourselves some additional q
 
 The problem, our current dataset doesn't have any actor or language information. We'll have to add that by doing some web crawling.
 
-## Part 1: Web crawling
+## Web crawling
 
 The file `top5.csv` you have generated before doesn't contain any actor or language information. The main problem is that this information is not present on the IMDB page that we have used. So we'll have to get it some other way. We did store the URL's for the webpage of each movie in the `. csv` file. This links to a page with much more detailed information about each movie. This includes information on the movies' "stars" and language.
 
@@ -51,74 +51,3 @@ To aid you in this process (and speed it up significantly) we have provided you 
 * Have a look at the `find()` function in the documentation of BeautifulSoup4 and look for the CSS selectors, they will make this exercise much easier!
 * The script will be not be fast. Each page has a lot of text to get through, and there will be hundreds of pages. This is not a problem. But, for your own convenience, **create a small test input file with only two or three movies**, to see if it's working correctly before you run the script for the entire dataset.
 * There is at least one movie that has no language listed at all ([this one](https://www.imdb.com/title/tt2185022/)). Think of a way that makes sure your program doesn't crash when your Beautifulsoup `find()` doesn't find any languages. You could test this movie explicitly in your small test input file!
-
-## Part 2: Actors
-
-But now that we have the data crawled and scraped, we might ask ourselves some additional questions.
-
-Which actor was most influential between 1930 and 2020?
-
-Again, we'll reformulate the question so we can give some sort of answer given our data:
-
-Which actor has appeared the most in the top 5 movies of all the years between 1930 and 2020?
-
-### Goal
-
-Write a program called `visualize_actors.py` that generates a bar plot of the top 50 actors with the most appearances in our dataset.
-
-Usage:
-
-    $ python visualize_actors.py data/top5-actors-languages.csv plots/actors.png
-
-The program has the following requirements:
-
-- It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `actors.png` in the directory `plots`, based on the data of `top5` in the directory `data`.
-- It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a bar plot. This can be done using matplotlibs [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html) method.
-- The horizontal axis of the plots should have the actors (only the 50 actors with the most appearances), the vertical axis should have the number of appearances of that actor. Printing 50 names vertically might make your plot illegible, try to change this so that its clear what bar belongs to what actor.
-- The bar plot should be sorted (highest first).
-
-### Question 2
-
-(write your answers in a document called `answers.txt`)
-
-Looking at your plot, which actor was the most influential?
-
-## Part 3: Languages
-
-We're going to visualize the language representation in top rated movies, to answer the question:
-
-How did language influence in the top rated movies change over the last 9 decades?
-
-Write a program called `visualize_languages.py` that generates a line plot of **the top 10 languages** (that occur the most in our dataset) over time.
-
-Usage:
-
-    $ python visualize_languages.py data/top5-actors-languages.csv plots/languages.png
-
-The program has the following requirements:
-
-- It should accept two command line arguments. The first argument is the location of the data file, the second argument is the location of the output file. So with the call above the program will generate a plot `languages.png` in the directory `plots`, based on the data of `top5-actors-languages` in the directory `data`.
-- It should read the input into a pandas DataFrame.
-- It should output a `.png` file containing a line plot with one line per language. This can be done using matplotlibs [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html) method.
-- The plot should have a legend making clear which line corresponds to which language.
-- It should show the number of occurrences of each language *per decade*. (Each occurrence counts equally, whether it's the first language or the last language for a movie).
-- The horizontal axis of the plot should have the decades (1930s to 2010s), the vertical axis should have the number of occurrences.
-
-### Hints
-
-- Keep in mind that there is at least one movie for which there is no language available, and that a couple of movies also have one of their languages listed as `'None'`.
-
-### Question 3
-
-(write your answers in a document called `answers.txt`)
-
-Looking at your plot, which was the second most influential language in the 1970s?
-
-
-### Question 4
-(write your answers in a document called `answers.txt`)
-
-And which language was the second most influential in the 2010s?
-
-## Done

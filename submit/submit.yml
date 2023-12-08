@@ -2,7 +2,7 @@ name: scraping-data
 files:
     required:
         - homepage.zip
-        - pandas.ipynb
+        - pandas_advanced.ipynb
         - scraper.py
         - extract.py
         - visualize_years.py
