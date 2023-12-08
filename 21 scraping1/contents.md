@@ -2,7 +2,7 @@
 
 ### Goal
 
-First, implement the `extract_movies()` function. It should extract a `DataFrame` containing the highest rated movies from the passed DOM (which is of an [IMDB page]([https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-01-01&num_votes=5000,&sort=user_rating,desc&start=1&view=advanced])). Each row in the `DataFrame`  should be of a single movie. The columns should contain the following data:
+First, implement the `extract_movies()` function. It should extract a `DataFrame` containing the highest rated movies from the passed DOM (which is of an [IMDB page](https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-01-01&num_votes=5000,&sort=user_rating,desc&start=1&view=advanced)). Each row in the `DataFrame`  should be of a single movie. The columns should contain the following data:
 
   - Title
   - Rating
