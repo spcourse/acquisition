@@ -17,15 +17,15 @@ Usage:
 This will take the data from `top5.csv`, use the URL's to read the page for each movie and retrieve the languages spoken in that movie. It will write the results to `top5-actors-languages.csv`. So this will look something like this:
 
     title,rating,year,actors,languages,runtime,url
-    emlya,7.3,1930,Stepan Shkurat;Semyon Svashenko;Yuliya Solntseva;Yelena Maksimova,None;Russian,75,https://www.imdb.com//title/tt0021571/
-    Animal Crackers,7.5,1930,Groucho Marx;Harpo Marx;Chico Marx;The Marx Brothers,English,97,https://www.imdb.com//title/tt0020640/
-    All Quiet on the Western Front,8.1,1930,Lew Ayres;Louis Wolheim;John Wray;Arnold Lucy,English;French;German;Latin,152,https://www.imdb.com//title/tt0020629/
+    emlya,7.3,1930,Stepan Shkurat;Semyon Svashenko;Yuliya Solntseva;Yelena Maksimova,None;Russian,75,https://www.imdb.com/title/tt0021571/
+    Animal Crackers,7.5,1930,Groucho Marx;Harpo Marx;Chico Marx;The Marx Brothers,English,97,https://www.imdb.com/title/tt0020640/
+    All Quiet on the Western Front,8.1,1930,Lew Ayres;Louis Wolheim;John Wray;Arnold Lucy,English;French;German;Latin,152,https://www.imdb.com/title/tt0020629/
 
     ...
 
-    Kumbalangi Nights,8.6,2019,Shane Nigam;Soubin Shahir;Fahadh Faasil;Sreenath Bhasi,Malayalam,135,https://www.imdb.com//title/tt8413338/
-    Jersey,8.6,2019,Nani;Shraddha Srinath;Sathyaraj;Harish Kalyan,Telugu,157,https://www.imdb.com//title/tt8948790/
-    Kaithi,8.5,2019,Karthi;Narain;Ramana;George Maryan,Tamil,145,https://www.imdb.com//title/tt9900782/
+    Kumbalangi Nights,8.6,2019,Shane Nigam;Soubin Shahir;Fahadh Faasil;Sreenath Bhasi,Malayalam,135,https://www.imdb.com/title/tt8413338/
+    Jersey,8.6,2019,Nani;Shraddha Srinath;Sathyaraj;Harish Kalyan,Telugu,157,https://www.imdb.com/title/tt8948790/
+    Kaithi,8.5,2019,Karthi;Narain;Ramana;George Maryan,Tamil,145,https://www.imdb.com/title/tt9900782/
 
 Notice the additional columns `actors` and `languages`. Often a movie has more than one actor or language. They are separated by a semicolon `;`.
 

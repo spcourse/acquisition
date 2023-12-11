@@ -19,14 +19,14 @@ When we run your program:
 It should produce a file called `top50.csv` in the directory `data` containing the following data:
 
     title,rating,year,runtime,url
-    Hababam Sinifi,9.3,1975,87,https://www.imdb.com//title/tt0252487/
-    The Shawshank Redemption,9.3,1994,142,https://www.imdb.com//title/tt0111161/
-    Aynabaji,9.2,2016,147,https://www.imdb.com//title/tt5354160/
+    Hababam Sinifi,9.3,1975,87,https://www.imdb.com/title/tt0252487/
+    The Shawshank Redemption,9.3,1994,142,https://www.imdb.com/title/tt0111161/
+    Aynabaji,9.2,2016,147,https://www.imdb.com/title/tt5354160/
 
     ...
 
-    The Matrix,8.7,1999,136,https://www.imdb.com//title/tt0133093/
-    Lepa sela lepo gore,8.7,1996,115,https://www.imdb.com//title/tt0116860/
+    The Matrix,8.7,1999,136,https://www.imdb.com/title/tt0133093/
+    Lepa sela lepo gore,8.7,1996,115,https://www.imdb.com/title/tt0116860/
 
 (in total it should contain 51 lines)
 

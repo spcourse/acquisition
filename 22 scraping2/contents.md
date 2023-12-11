@@ -26,15 +26,15 @@ When we run your program:
 You should wind up with a large (thousands of lines) `.csv` file, like this:
 
     title,rating,year,runtime,url
-    Animal Crackers,7.5,1930,97,https://www.imdb.com//title/tt0020640/
-    Hell's Angels,7.3,1930,127,https://www.imdb.com//title/tt0020960/
-    Der blaue Engel,7.7,1930,104,https://www.imdb.com//title/tt0020697/
+    Animal Crackers,7.5,1930,97,https://www.imdb.com/title/tt0020640/
+    Hell's Angels,7.3,1930,127,https://www.imdb.com/title/tt0020960/
+    Der blaue Engel,7.7,1930,104,https://www.imdb.com/title/tt0020697/
 
     ...
 
-    Sound of Metal,7.8,2019,120,https://www.imdb.com//title/tt5363618/
-    The Boy Who Harnessed the Wind,7.6,2019,113,https://www.imdb.com//title/tt7533152/
-    Batla House,7.2,2019,146,https://www.imdb.com//title/tt8869978/
+    Sound of Metal,7.8,2019,120,https://www.imdb.com/title/tt5363618/
+    The Boy Who Harnessed the Wind,7.6,2019,113,https://www.imdb.com/title/tt7533152/
+    Batla House,7.2,2019,146,https://www.imdb.com/title/tt8869978/
 
 
 ## Done
