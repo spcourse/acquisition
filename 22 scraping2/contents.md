@@ -4,7 +4,7 @@ In order to decide which year was best for films, we will need a lot more movies
 
 However, if we pay attention to the URL we can see that we could do this in a more efficient fashion:
 
-    `https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-01-01&num_votes=5000,&sort=user_rating,desc&view=advanced`
+    https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-12-31&num_votes=5000,&sort=user_rating,desc&view=advanced
 
 We can adjust the dates in the link such that the results we get are the top 50 movies for a single year, and then repeat that request for every year that we need!
 
