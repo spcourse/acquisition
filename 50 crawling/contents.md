@@ -41,7 +41,7 @@ To aid you in this process (and speed it up significantly) we have provided you 
 - The program accepts two positional command line arguments: the input file and the output file. You should use `argparse` for this.
 - The program reads the data from the input file into a pandas DataFrame.
 - The program uses `get_multiple_page_contents()` from `helpers.py` to retrieve the content for a list of URLs and stores the htmls in the folder "/webpages".
-- The program then uses `read_page_content_from_disk()` to get the html from disk one by one, finds the actors listed under "stars" (often only 3 or 4 actors), and the languages spoken in that movie. Store these values in the DataFrame.
+- The program then uses `read_page_content_from_disk()` to get the html from disk one by one, finds the actors listed under "stars" (often only 3 or 4 actors), and the languages spoken in that movie. Store these values in the DataFrame. This html can be converted to a DOM using BeautifulSoup.
 - The result is written as a `.csv` to the output file.
 - If a movie has more than one actor or language, they should be separated by a semicolon.
 - The resulting output `.csv` should be sorted by year (ascending)
