@@ -14,29 +14,33 @@ In this assignment you will learn about three libraries:
 
 *What was the best year for movies?*
 
-This is often debated on the internet. For example [here](https://www.washingtonpost.com/news/style/wp/2018/12/28/feature/what-was-the-best-year-in-movie-history/), [here](https://www.independent.co.uk/arts-entertainment/films/features/film-history-best-year-1999-star-wars-matrix-fight-club-sixth-sense-a9036911.html), [here](https://www.reddit.com/r/movies/comments/5m6jrp/best_year_for_movies/) and [here](https://www.maxim.com/entertainment/10-movies-prove-1994-was-best-year-film-history).
+Movies and their quality are often debated on the internet. Especially what the best time period was for movies, for example [here](https://www.washingtonpost.com/news/style/wp/2018/12/28/feature/what-was-the-best-year-in-movie-history/), [here](https://www.independent.co.uk/arts-entertainment/films/features/film-history-best-year-1999-star-wars-matrix-fight-club-sixth-sense-a9036911.html), [here](https://www.reddit.com/r/movies/comments/5m6jrp/best_year_for_movies/) and [here](https://www.maxim.com/entertainment/10-movies-prove-1994-was-best-year-film-history). Similarly, we might come up with a couple of discussion points ourself; Which actors were the most influential? Additionally, when we look at the language spoken in the top films, we might assume that English is very dominant. But how much so compared to other languages? And has this always been the same? Or does this depend on the decade we consider?
 
-Let's try to see if we can find some data to settle these discussions. For this we need to do some *web scraping*.
+Let's try to see if we can find data to settle some these discussions. For this we need to do *web scraping*.
 
-In order to answer the questions we'll have to make some assumptions. Most importantly we're going to assume that the top 5 movies of each year are indicative of how good that year was for movies. So we'll reformulate the question:
+In order to answer the questions we'll have to make some assumptions. Most importantly we're going to assume that the top 5 movies of each year are indicative of how good that year was for movies. So our first objective is finding this data:
 
-*What year had the best average IMDB rating for it's top 5 movies?*
+*What are the top 5 movies for every year since 1930?*
 
-Admittedly a much less catchy question.
+Then, we should be able to answer our main research questions:
+
+- *Which actors were the most influential?*
+- *Which languages were the most influential?*
+
+Admittedly much less catchy questions.
 
 ### Pipeline
 
 For this exercise you will set up a data pipeline with the following steps:
 
-| Pipeline step           |                                                                                                 |
-|-------------------------|-------------------------------------------------------------------------------------------------|
-| Asking a Question       | What was the best year for movies?                                                              |
-| Acquiring the data      | Using BeautifulSoup and pandas to scrape IMDB pages to a CSV file (`scraper.py`)                |
-| Transforming the data   | Use the acquired CSV to filter out relevant data (`extract.py`)                                 |
-<!-- | Visualizing the data    | Plotting the average score for the top 5 movies for each year (`visualize_years.py`)            | -->
-| Collecting more data    | Use links we've collected earlier to scrape more data about our movies from IMDB (`crawler.py`) |
-| Visualizing the data    | Answering our research questions by plotting data (`visualize_years.py`)                        |
-
+| Pipeline step           |                                                                                                       |
+|-------------------------|-------------------------------------------------------------------------------------------------------|
+| Asking a question       | Defining the data that is required to be able to answer the questions                                 |
+| Acquiring the data      | Using BeautifulSoup and pandas to scrape IMDB pages to a CSV file (`scraper.py`)                      |
+| Transforming the data   | Use the acquired CSV to filter out relevant data (`extract.py`)                                       |
+| Collecting more data    | Use links we've collected earlier to scrape more data about our movies from IMDB (`crawler.py`)       |
+| Visualizing the data    | Plotting data (`visualize_actors.py` and `visualize_languages.py`)                                    |
+| Answering our questions | Answering our research questions by analysing the plots                                               |
 
 ## Reading and understanding the provided code in `scraper.py`
 
@@ -47,7 +51,7 @@ To get you started we have provided you with a script (`scraper.py`) that loads 
   <https://www.imdb.com/search/title/?title_type=feature&release_date=1930-01-01,2020-12-31&num_votes=5000,&sort=user_rating,desc>
 
 - `title_type=feature` indicates we only want so called "feature films".
-- `release_date=1930-01-01,2020-12-31` indicates we want movies released between 1930 up to and including 2020.
+- `release_date=1930-01-01,2020-12-31` indicates we want movies released between 1930 up to *and including* 2020.
 - `num_votes=5000` indicates we want movies that have been rated at least 5000 times
 - `sort=user_rating,desc` indicates we want to sort by user rating, in descending order
 
@@ -79,7 +83,7 @@ In total the `top50.csv` file should contain 51 lines that can be cross-checked 
 
 ## Modifying `scraper.py`
 
-In order to decide which year was best for films, we will need a lot more movies than just the top50. IMDB does not provide an option to directly load a page with the top 4000 or so movies. On the website, by clicking the button with "50 more", we can load the next 50 movies, and the next, and the next, etc. This is very inconvenient as our program can not click this button.
+In order to answer our research questions, we will need a lot more movies than just the top50 of all time. IMDB does not provide an option to directly load a page with the top 4000 or so movies. On the website, by clicking the button with "50 more", we can load the next 50 movies, and the next, and the next, etc. This is very inconvenient as our program can not click this button.
 
 However, if we pay attention to the URL we can see that we could do this in a more efficient fashion:
 
@@ -143,6 +147,8 @@ We'd expect a much smaller file!
     The Bank Dick,7.1,1940,72,https://www.imdb.com/title/tt0032234/
     Go West,6.8,1940,80,https://www.imdb.com/title/tt0032536/
     The Invisible Man Returns,6.5,1940,81,https://www.imdb.com/title/tt0032635/
+
+Make sure you double check your `end_year` is also included in the data!
 
 > Keep in mind that doing this with large ranges of years might take a while, so it might be wise to somehow indicate the year for which your program is currently retrieving data. This way you have an indication that your program is still running, and how long it will take. Starting with a smaller range to test everything is probably wise!
 

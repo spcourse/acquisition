@@ -1,12 +1,12 @@
 ## Visualizing Actors
 
-Now that we have the data crawled and scraped, we might ask ourselves some additional questions.
+Now that we have the data crawled and scraped, we might ask ourselves some questions.
 
-Which actor was most influential between 1930 and 2020?
+*Which actor was most influential between 1930 and 2020?*
 
-Again, we'll reformulate the question so we can give some sort of answer given our data:
+We'll reformulate the question so we can give some sort of answer given our data:
 
-Which actor has appeared the most in the top 5 movies of all the years between 1930 and 2020?
+*Which actor has appeared the most in the top 5 movies of all the years between 1930 and 2020?*
 
 ### Goal
 

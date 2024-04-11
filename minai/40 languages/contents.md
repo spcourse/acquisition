@@ -2,7 +2,7 @@
 
 We're going to visualize the language representation in top rated movies, to answer the question:
 
-How did language influence in the top rated movies change over the last 9 decades?
+*How did language influence in the top rated movies change over the last 9 decades?*
 
 Write a program called `visualize_languages.py` that generates a line plot of **the top 10 languages** (that occur the most in our dataset) over time.
 

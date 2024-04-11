@@ -1,8 +1,8 @@
 # Crawling
 
-We have done what we set out to do. But we might ask ourselves some additional questions. Like; which actors were the most influential? Additionally, when we look at the language spoken in the top films, we might assume that English is very dominant. But how much so compared to other languages? And has this always been the same? Or does this depend on the decade we consider?
+Now that we have the top 5 movies for every year, we can set out to answer our research questions. Like; which actors were the most influential? Additionally, when we look at the language spoken in the top films, we might assume that English is very dominant. But how much so compared to other languages? And has this always been the same? Or does this depend on the decade we consider?
 
-The problem is that our current dataset doesn't have any actor or language information. We'll have to add that by doing some web crawling.
+The problem is that our current dataset doesn't have any actor or language information. We'll have to add the actors and languages to our dataset by doing some web crawling.
 
 ## Web crawling
 

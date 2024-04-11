@@ -1,8 +1,9 @@
 # Transforming
 
-We're on our way to answer the question:
+We're on our way to answer the questions:
 
-What year had the best average IMDB rating for it's top 5 movies?
+- *Which actors were the most influential?*
+- *Which languages were the most influential?*
 
 For most years the current data contains many more movies than just the top 5. So we should first do a transformation.
 
@@ -31,9 +32,9 @@ You can apply some common sense testing to see if your answer is correct:
 
 - How many lines do you expect the file to have?
 - Does the top 5 in your file correspond to what you find on IMDB?
-- Are the movies sorted properly?
+- Are the movies sorted properly? Both on year **and** then by rating?
 - Does the optional command line argument `-n` work properly? Ask yourself the questions above for different values of N.
 
 ## Done
 
-In the next step you'll visualize the date to finally answer the question: What year had the best average IMDB rating for it's top 5 movies?
+In the next step you'll gather some more data that we need to answer our research questions.
